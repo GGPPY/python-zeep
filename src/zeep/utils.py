@@ -70,7 +70,7 @@ def get_base_class(objects):
     base_class = None
     for i in range(max_mro):
         try:
-            if len({bases[j][i] for j in range(num_objects)}) > 1:
+            if len([bases[j][i] for j in range(num_objects)]) > 1:
                 break
         except IndexError:
             break
